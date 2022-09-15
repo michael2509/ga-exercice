@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print hello
+      - name: print hello world
         run: echo 'hello world'
 
   print-action:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print world
-        run: echo '${{ github.event.action }}'
+      - name: print action
+        run: echo ${{ github.event.action }}
