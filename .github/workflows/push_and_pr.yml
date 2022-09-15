@@ -7,6 +7,7 @@ on:
 
 jobs:
   print-hello-world:
+    if: ${{ github.event.action }} == ''
     runs-on: ubuntu-latest
 
     steps:
@@ -14,6 +15,7 @@ jobs:
         run: echo 'hello world'
 
   print-action:
+    if: ${{ github.event.action }} == 'opened'
     runs-on: ubuntu-latest
 
     steps:
