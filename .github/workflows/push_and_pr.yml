@@ -1,0 +1,19 @@
+name: Push and PR
+
+on:
+  push:
+
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print hello
+        run: echo 'hello'
+
+  print-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print world
+        run: echo 'world'
