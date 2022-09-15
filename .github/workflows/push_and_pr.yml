@@ -2,9 +2,12 @@ name: Push and PR
 
 on:
   push:
+  pull_request:
+    types: [opened]
 
 jobs:
   print-hello:
+    if: ${{ github.event.action }} == 'opened'
     runs-on: ubuntu-latest
 
     steps:
