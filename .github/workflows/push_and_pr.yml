@@ -6,17 +6,16 @@ on:
     types: [opened]
 
 jobs:
-  print-hello:
-    if: ${{ github.event.action }} == 'opened'
+  print-hello-world:
     runs-on: ubuntu-latest
 
     steps:
       - name: print hello
-        run: echo 'hello'
+        run: echo 'hello world'
 
-  print-world:
+  print-action:
     runs-on: ubuntu-latest
 
     steps:
       - name: print world
-        run: echo 'world'
+        run: echo '${{ github.event.action }}'
