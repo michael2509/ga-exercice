@@ -3,7 +3,6 @@ name: Events exercices
 on:
   schedule:
     - cron: "*/1 * * * *"
-  workflow_dispatch:
 
 jobs:
   print-event:
