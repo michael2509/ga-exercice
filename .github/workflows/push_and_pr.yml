@@ -3,7 +3,6 @@ name: Push and PR
 on:
   push:
   pull_request:
-    types: [opened]
 
 jobs:
   print-hello-world:
@@ -12,11 +11,11 @@ jobs:
     steps:
       - name: print hello world
         run: echo 'hello world'
-
-  print-action:
-    if: ${{ github.event.pull_request.opened }} == true
+  
+  print-hello-world-2:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
-      - name: print action
-        run: echo ${{ github.event.action }}
+      - name: print hello world
+        run: echo 'hello world'

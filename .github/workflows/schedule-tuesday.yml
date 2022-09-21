@@ -1,0 +1,15 @@
+# trigger every tuesday at 10:00
+
+name: Schedule every tuesday at 3pm
+
+on:
+  schedule:
+    - cron: '0 15 * * 2'
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print hello world
+        run: echo 'hello world'

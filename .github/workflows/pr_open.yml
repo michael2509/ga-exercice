@@ -1,0 +1,14 @@
+name: PR Open
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronise, reopened]
+
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print hello world
+        run: echo 'hello world'
