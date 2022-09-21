@@ -1,0 +1,13 @@
+name: Docker image
+on:
+  push:
+jobs:
+  docker-image:
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: docker://node:alpine
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test
