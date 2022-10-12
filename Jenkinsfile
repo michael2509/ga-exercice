@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                cd './node-app'
                 nodejs(nodeJSInstallationName: '17.9.1') {
-                    cd './node-app'
                     sh 'npm install'
                     sh 'npm run build'
                     sh 'npm test'
-                    echo 'finished'
                 }
+                echo 'finished'
             }
         }
     }
